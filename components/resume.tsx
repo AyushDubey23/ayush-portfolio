@@ -17,10 +17,10 @@ export default function Resume({ darkMode }: ResumeProps) {
       title: "EDUCATION",
       items: [
         {
-          title: "Computer Science Engineering",
+          title: "Bachelors in Technology (Engineering)",
           institution: "MMMUT, Gorakhpur",
           period: "2024 - 2028",
-          details: "Currently pursuing Bachelor of Technology in Computer Science Engineering",
+          details: "Currently pursuing Bachelor of Technology from Madan Moan Malviya University of Technology ",
         },
         {
           title: "12th Grade (PCM)",
