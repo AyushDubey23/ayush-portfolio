@@ -1,0 +1,316 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}
+
+.font-mono {
+  font-family: var(--font-jetbrains-mono), monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ef4444;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+/* Selection color */
+::selection {
+  background: #ef4444;
+  color: white;
+}
+
+/* Sharp edges for all elements */
+* {
+  border-radius: 0 !important;
+}
+
+/* Glitch effect for headers */
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 #ef4444, -0.05em -0.025em 0 #00ff00, 0.025em 0.05em 0 #0000ff;
+  }
+  15% {
+    text-shadow: 0.05em 0 0 #ef4444, -0.05em -0.025em 0 #00ff00, 0.025em 0.05em 0 #0000ff;
+  }
+  16% {
+    text-shadow: -0.05em -0.025em 0 #ef4444, 0.025em 0.025em 0 #00ff00, -0.05em -0.05em 0 #0000ff;
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 #ef4444, 0.025em 0.025em 0 #00ff00, -0.05em -0.05em 0 #0000ff;
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 #ef4444, 0.05em 0 0 #00ff00, 0 -0.05em 0 #0000ff;
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 #ef4444, 0.05em 0 0 #00ff00, 0 -0.05em 0 #0000ff;
+  }
+  100% {
+    text-shadow: -0.025em 0 0 #ef4444, -0.025em -0.025em 0 #00ff00, -0.025em -0.05em 0 #0000ff;
+  }
+}
+
+.glitch {
+  animation: glitch 1s linear infinite;
+}
+
+/* Matrix rain effect */
+@keyframes matrix {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.matrix-rain {
+  animation: matrix 3s linear infinite;
+}
+
+/* Typing cursor animation */
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.typing-cursor {
+  animation: blink 1s infinite;
+}
+
+/* Neon glow effect */
+.neon-glow {
+  box-shadow: 0 0 5px #ef4444, 0 0 10px #ef4444, 0 0 15px #ef4444, 0 0 20px #ef4444;
+}
+
+.neon-text {
+  text-shadow: 0 0 5px #ef4444, 0 0 10px #ef4444, 0 0 15px #ef4444, 0 0 20px #ef4444;
+}
+
+/* Code block styling */
+pre {
+  background: #111 !important;
+  border: 1px solid #ef4444 !important;
+  border-radius: 0 !important;
+}
+
+code {
+  background: #111 !important;
+  color: #ef4444 !important;
+  border-radius: 0 !important;
+}
+
+/* Button hover effects */
+.btn-hover {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.btn-hover:hover::before {
+  left: 100%;
+}
+
+/* Dark mode transitions */
+.dark-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Custom animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 0.6s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 0.6s ease-out;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+  h3 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Loading spinner */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Particle effects */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Grid pattern overlay */
+.grid-pattern {
+  background-image: linear-gradient(rgba(239, 68, 68, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(239, 68, 68, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Terminal-like styling */
+.terminal {
+  background: #000;
+  color: #00ff00;
+  font-family: var(--font-jetbrains-mono), monospace;
+  border: 2px solid #00ff00;
+  padding: 1rem;
+}
+
+.terminal::before {
+  content: "$ ";
+  color: #ef4444;
+}
+
+/* Cyberpunk aesthetic */
+.cyber-border {
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, #ef4444, #000, #ef4444) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* Holographic effect */
+.holographic {
+  background: linear-gradient(45deg, #ff0080, #00ff80, #8000ff, #ff8000);
+  background-size: 400% 400%;
+  animation: holographic 4s ease infinite;
+}
+
+@keyframes holographic {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Hide scrollbar for photography section */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
