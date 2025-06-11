@@ -44,7 +44,7 @@ export default function About({ darkMode }: AboutProps) {
           >
             <div className={`text-lg leading-relaxed ${darkMode ? "text-gray-300" : "text-gray-700"}`}>
               <p className="mb-4">
-                I'm a passionate Computer Science Engineering student at MMMUT, driven by the art of problem-solving and
+                I'm a passionate Computer Science  student at MMMUT, driven by the art of problem-solving and
                 the thrill of competitive programming. My journey in technology spans across multiple domains, from
                 crafting elegant web solutions to exploring the frontiers of machine learning.
               </p>
