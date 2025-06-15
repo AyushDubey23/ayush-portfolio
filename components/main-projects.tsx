@@ -14,9 +14,9 @@ export default function MainProjects({ darkMode }: MainProjectsProps) {
       id: 1,
       title: "RAP CASED",
       description:
-        "Hip-hop iPhone case store with dark theme and lo-fi flavor. Complete e-commerce solution with modern design.",
-      tech: ["React", "CSS", "JavaScript", "Responsive Design"],
-      liveUrl: "https://ayushdubey23.github.io/rap-cased/",
+        "RAP CASED is a visually immersive, lo-fi themed e-commerce experience crafted with React and powered by Next.js for seamless routing and high-performance rendering. Styled using Tailwind CSS, and deployed on Vercel’s edge network, it delivers a fast, responsive dark UI inspired by hip-hop culture. With a modular component architecture, fluid scroll animations, and optimized asset handling, it embodies clean, scalable frontend engineering and modern web best practices.",
+      tech: ["React.js", "Next.js", "Tailwind CC", "Responsive Design"],
+      liveUrl: "https://rap-cased-eosin.vercel.app/",
       githubUrl: "#",
       gif: "/assets/proj1.gif", // Updated path
     },
