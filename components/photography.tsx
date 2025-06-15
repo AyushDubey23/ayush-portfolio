@@ -13,16 +13,16 @@ export default function Photography({ darkMode }: PhotographyProps) {
 
   // Updated photo paths to match your assets folder
   const photos = [
-    { id: 1, src: `/assets/a.png`, alt: "Photography A" },
-    { id: 2, src: `/assets/b.png`, alt: "Photography B" },
-    { id: 3, src: `/assets/c.png`, alt: "Photography C" },
-    { id: 4, src: `/assets/d.png`, alt: "Photography D" },
-    { id: 5, src: `/assets/e.png`, alt: "Photography E" },
-    { id: 6, src: `/assets/f.png`, alt: "Photography F" },
-    { id: 7, src: `/assets/g.png`, alt: "Photography G" },
-    { id: 8, src: `/assets/h.png`, alt: "Photography H" },
-    { id: 9, src: `/assets/i.png`, alt: "Photography I" },
-    { id: 10, src: `/assets/j.png`, alt: "Photography J" },
+    { id: 1, src: `/assets/a.png`, alt: " " },
+    { id: 2, src: `/assets/b.png`, alt: " " },
+    { id: 3, src: `/assets/c.png`, alt: " " },
+    { id: 4, src: `/assets/d.png`, alt: " " },
+    { id: 5, src: `/assets/e.png`, alt: " " },
+    { id: 6, src: `/assets/f.png`, alt: " " },
+    { id: 7, src: `/assets/g.png`, alt: " " },
+    { id: 8, src: `/assets/h.png`, alt: " " },
+    { id: 9, src: `/assets/i.png`, alt: " " },
+    { id: 10, src: `/assets/j.png`, alt: " " },
   ]
 
   const handleScroll = (direction: "left" | "right") => {

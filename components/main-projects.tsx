@@ -39,13 +39,13 @@ export default function MainProjects({ darkMode }: MainProjectsProps) {
       gif: "/assets/proj3.gif", // Updated path
     },
     {
-      id: 4,
-      title: "INTERACTIVE TO-DO LIST",
-      description: "Feature-rich task management application with drag-and-drop functionality and local storage.",
-      tech: ["JavaScript", "HTML5", "CSS3", "Local Storage"],
-      liveUrl: "https://ayushdubey23.github.io/to-do-list/",
+      id: 4, 
+      title: "MACHINE LEARNING HAND DETECTION",
+      description: "VisionAI is a high-performance, browser-native computer vision platform engineered with TensorFlow.js and MediaPipe for real-time hand, face, and pose recognition—entirely client-side, with zero backend overhead. Architected for rapid inference and seamless interaction, it delivers intelligent detection with exceptional accuracy. Styled with a modern, responsive UI, the system exemplifies modular frontend design, optimized AI pipelines, and edge computing, highlighting robust JavaScript architecture and cutting-edge web-based deep learning capabilities.,
+      tech: ["TensorFlow.js","","JavaScript", "HTML5", "CSS3", "Local Storage"],
+      liveUrl: "https://ayushdubey23.github.io/Machine-Learning-Project-Vision-AI-/",
       githubUrl: "#",
-      gif: "/assets/proj4.gif", // Updated path
+      gif: "/assets/proj4.mp4", // Updated path
     },
   ]
 
