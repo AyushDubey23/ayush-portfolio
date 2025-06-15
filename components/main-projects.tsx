@@ -48,7 +48,7 @@ export default function MainProjects({ darkMode }: MainProjectsProps) {
       tech: ["TensorFlow.js", "JavaScript", "HTML5", "MediaPipe", "Local Storage"],
       liveUrl: "https://ayushdubey23.github.io/Machine-Learning-Project-Vision-AI-/",
       githubUrl: "#",
-      gif: "/assets/proj4.mp4"
+      gif: "/assets/proj4.gif"
     },
   ];
 
