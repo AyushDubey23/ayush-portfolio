@@ -45,7 +45,7 @@ export default function MainProjects({ darkMode }: MainProjectsProps) {
       title: "MACHINE LEARNING HAND DETECTION",
       description:
         "VisionAI is a high-performance, browser-native computer vision platform engineered with TensorFlow.js and MediaPipe for real-time hand, face, and pose recognition—entirely client-side, with zero backend overhead. Architected for rapid inference and seamless interaction, it delivers intelligent detection with exceptional accuracy. Styled with a modern, responsive UI, the system exemplifies modular frontend design, optimized AI pipelines, and edge computing, highlighting robust JavaScript architecture and cutting-edge web-based deep learning capabilities.",
-      tech: ["TensorFlow.js", "JavaScript", "HTML5", "CSS3", "Local Storage"],
+      tech: ["TensorFlow.js", "JavaScript", "HTML5", "MediaPipe", "Local Storage"],
       liveUrl: "https://ayushdubey23.github.io/Machine-Learning-Project-Vision-AI-/",
       githubUrl: "#",
       gif: "/assets/proj4.mp4"
