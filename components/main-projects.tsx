@@ -15,7 +15,7 @@ export default function MainProjects({ darkMode }: MainProjectsProps) {
       title: "RAP CASED",
       description:
         "RAP CASED is a visually immersive, lo-fi themed e-commerce experience crafted with React and powered by Next.js for seamless routing and high-performance rendering. Styled using Tailwind CSS, and deployed on Vercel’s edge network, it delivers a fast, responsive dark UI inspired by hip-hop culture. With a modular component architecture, fluid scroll animations, and optimized asset handling, it embodies clean, scalable frontend engineering and modern web best practices.",
-      tech: ["React.js", "Next.js", "Tailwind CC", "Responsive Design"],
+      tech: ["React.js", "Next.js", "Tailwind CSS", "Responsive Design"],
       liveUrl: "https://rap-cased-eosin.vercel.app/",
       githubUrl: "#",
       gif: "/assets/proj1.gif", // Updated path
@@ -23,8 +23,8 @@ export default function MainProjects({ darkMode }: MainProjectsProps) {
     {
       id: 2,
       title: "MESS SLOT BOOKING",
-      description: "Real-time mess queue management system for efficient dining hall operations with live updates.",
-      tech: ["React", "Firebase", "Real-time DB", "Authentication"],
+      description: "MessMate is a full-stack, campus-focused slot booking platform engineered with Next.js for hybrid rendering and MongoDB as its dynamic backend datastore. Designed with a clean, mobile-first UI using Tailwind CSS, and deployed seamlessly via Vercel, it delivers a fast, intuitive user experience optimized for high concurrency and real-time interaction. Built with a modular architecture, RESTful API integration, and scalable data flow, the app showcases production-ready design patterns, efficient state management, and modern full-stack development best practices tailored for smart queue systems.",
+      tech: ["React.js","Next.js", "Firebase", "MongoDB","Tailwind CSS", "Authentication"],
       liveUrl: "https://ayushdubey23.github.io/mess_slot_booking/",
       githubUrl: "#",
       gif: "/assets/proj2.gif", // Updated path
