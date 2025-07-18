@@ -44,94 +44,10 @@ export default function MiniProjects({ darkMode }: MiniProjectsProps) {
     { title: "Disorder Simulator", url: "https://simplewebdevprojects.github.io/Disorder_Simulator/", emoji: "🧠" },
     { title: "Physics Simulation", url: "https://simplewebdevprojects.github.io/Physics_Simulation/", emoji: "⚛️" },
     { title: "Arcade Game Box", url: "https://simplewebdevprojects.github.io/Arcade_Game_Box/", emoji: "🎮" },
-    { title: "Letter Case Changer", url: "https://simplewebdevprojects.github.io/Letter_Case_Changer/", emoji: "🔤" },
-    { title: "Weather App", url: "https://simplewebdevprojects.github.io/Weather_App/", emoji: "🌤️" },
-    {
-      title: "GitHub Profile Finder",
-      url: "https://simplewebdevprojects.github.io/Github_Profile_Finder/",
-      emoji: "🔍",
-    },
-    { title: "Periods Tracker (FemCare)", url: "https://simplewebdevprojects.github.io/Periods_Tracker/", emoji: "📅" },
-    {
-      title: "Keyboard Visual Audio Simulator",
-      url: "https://simplewebdevprojects.github.io/Keyboard_Visual_Audio_Simulator/",
-      emoji: "🎹",
-    },
-    { title: "YouTube Clone", url: "https://simplewebdevprojects.github.io/Youtube_Clone/", emoji: "📺" },
-    { title: "Ping Pong Game", url: "https://simplewebdevprojects.github.io/Ping_Pong_Game/", emoji: "🏓" },
-    {
-      title: "Document to 3D Visualizer",
-      url: "https://simplewebdevprojects.github.io/Document_to_3D_Visualizer/",
-      emoji: "📄",
-    },
-    {
-      title: "Browser Forensics for Safety",
-      url: "https://simplewebdevprojects.github.io/Browser_Forensics_For_Safety/",
-      emoji: "🔒",
-    },
-    { title: "Disorder Simulator", url: "https://simplewebdevprojects.github.io/Disorder_Simulator/", emoji: "🧠" },
-    { title: "Physics Simulation", url: "https://simplewebdevprojects.github.io/Physics_Simulation/", emoji: "⚛️" },
-    { title: "Arcade Game Box", url: "https://simplewebdevprojects.github.io/Arcade_Game_Box/", emoji: "🎮" },
-    { title: "Letter Case Changer", url: "https://simplewebdevprojects.github.io/Letter_Case_Changer/", emoji: "🔤" },
-    { title: "Weather App", url: "https://simplewebdevprojects.github.io/Weather_App/", emoji: "🌤️" },
-    {
-      title: "GitHub Profile Finder",
-      url: "https://simplewebdevprojects.github.io/Github_Profile_Finder/",
-      emoji: "🔍",
-    },
-    { title: "Periods Tracker (FemCare)", url: "https://simplewebdevprojects.github.io/Periods_Tracker/", emoji: "📅" },
-    {
-      title: "Keyboard Visual Audio Simulator",
-      url: "https://simplewebdevprojects.github.io/Keyboard_Visual_Audio_Simulator/",
-      emoji: "🎹",
-    },
-    { title: "YouTube Clone", url: "https://simplewebdevprojects.github.io/Youtube_Clone/", emoji: "📺" },
-    { title: "Ping Pong Game", url: "https://simplewebdevprojects.github.io/Ping_Pong_Game/", emoji: "🏓" },
-    {
-      title: "Document to 3D Visualizer",
-      url: "https://simplewebdevprojects.github.io/Document_to_3D_Visualizer/",
-      emoji: "📄",
-    },
-    {
-      title: "Browser Forensics for Safety",
-      url: "https://simplewebdevprojects.github.io/Browser_Forensics_For_Safety/",
-      emoji: "🔒",
-    },
-    { title: "Disorder Simulator", url: "https://simplewebdevprojects.github.io/Disorder_Simulator/", emoji: "🧠" },
-    { title: "Physics Simulation", url: "https://simplewebdevprojects.github.io/Physics_Simulation/", emoji: "⚛️" },
-    { title: "Arcade Game Box", url: "https://simplewebdevprojects.github.io/Arcade_Game_Box/", emoji: "🎮" },
-    { title: "Letter Case Changer", url: "https://simplewebdevprojects.github.io/Letter_Case_Changer/", emoji: "🔤" },
-    { title: "Weather App", url: "https://simplewebdevprojects.github.io/Weather_App/", emoji: "🌤️" },
-    {
-      title: "GitHub Profile Finder",
-      url: "https://simplewebdevprojects.github.io/Github_Profile_Finder/",
-      emoji: "🔍",
-    },
-    { title: "Periods Tracker (FemCare)", url: "https://simplewebdevprojects.github.io/Periods_Tracker/", emoji: "📅" },
-    {
-      title: "Keyboard Visual Audio Simulator",
-      url: "https://simplewebdevprojects.github.io/Keyboard_Visual_Audio_Simulator/",
-      emoji: "🎹",
-    },
-    { title: "YouTube Clone", url: "https://simplewebdevprojects.github.io/Youtube_Clone/", emoji: "📺" },
-    { title: "Ping Pong Game", url: "https://simplewebdevprojects.github.io/Ping_Pong_Game/", emoji: "🏓" },
-    {
-      title: "Document to 3D Visualizer",
-      url: "https://simplewebdevprojects.github.io/Document_to_3D_Visualizer/",
-      emoji: "📄",
-    },
-    {
-      title: "Browser Forensics for Safety",
-      url: "https://simplewebdevprojects.github.io/Browser_Forensics_For_Safety/",
-      emoji: "🔒",
-    },
-    { title: "Disorder Simulator", url: "https://simplewebdevprojects.github.io/Disorder_Simulator/", emoji: "🧠" },
-    { title: "Physics Simulation", url: "https://simplewebdevprojects.github.io/Physics_Simulation/", emoji: "⚛️" },
-    { title: "Arcade Game Box", url: "https://simplewebdevprojects.github.io/Arcade_Game_Box/", emoji: "🎮" },
   ]
 
   return (
-    <section className={`py-20 overflow-hidden ${darkMode ? "bg-black" : "bg-white"}`}>
+    <section className={`py-20 mini-projects-container ${darkMode ? "bg-black" : "bg-white"}`}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -143,7 +59,7 @@ export default function MiniProjects({ darkMode }: MiniProjectsProps) {
           <div className="w-24 h-1 bg-red-500 mx-auto" />
         </motion.div>
 
-        <div className="relative">
+        <div className="relative overflow-hidden">
           <motion.div
             animate={{ x: [0, -2000] }}
             transition={{
@@ -151,7 +67,7 @@ export default function MiniProjects({ darkMode }: MiniProjectsProps) {
               repeat: Number.POSITIVE_INFINITY,
               ease: "linear",
             }}
-            className="flex space-x-6"
+            className="mini-projects-scroll flex space-x-6"
           >
             {[...miniProjects, ...miniProjects].map((project, index) => (
               <motion.div

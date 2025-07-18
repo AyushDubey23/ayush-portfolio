@@ -26,7 +26,7 @@ export default function Portfolio() {
 
   return (
     <div
-      className={`min-h-screen transition-colors duration-300 ${
+      className={`min-h-screen transition-colors duration-300 overflow-x-hidden w-full ${
         darkMode ? "dark bg-black text-white" : "bg-gray-100 text-gray-900"
       }`}
     >

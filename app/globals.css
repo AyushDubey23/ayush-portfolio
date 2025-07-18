@@ -16,13 +16,16 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   font-family: var(--font-inter), sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  width: 100%;
+  max-width: 100vw;
 }
 
 .font-mono {
@@ -56,6 +59,19 @@ body {
 /* Sharp edges for all elements */
 * {
   border-radius: 0 !important;
+}
+
+/* Prevent horizontal overflow */
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fix for sections that might overflow */
+section {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 /* Glitch effect for headers */
@@ -313,4 +329,15 @@ code {
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
+}
+
+/* Fix for mini projects animation overflow */
+.mini-projects-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.mini-projects-scroll {
+  width: max-content;
 }
