@@ -62,26 +62,100 @@ export default function Hero({ darkMode }: HeroProps) {
       </div>
 
       <div className="container mx-auto px-4 text-center relative z-10 py-8">
-        {/* Profile Picture - Responsive sizing */}
+        {/* Profile Picture - Responsive sizing with link */}
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.5 }}
           className="mb-6 md:mb-8"
         >
-          <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto relative">
-            <div className={`absolute inset-0 bg-gradient-to-r from-red-500 to-red-700 transform rotate-45`} />
+          <motion.a
+            href="https://pixels-tan.vercel.app/"
+            whileHover={{
+              scale: 1.1,
+              rotate: [0, -1, 1, -1, 1, 0],
+              filter: [
+                "brightness(1) contrast(1)",
+                "brightness(1.3) contrast(1.2) saturate(1.5)",
+                "brightness(0.8) contrast(1.3) saturate(1.2)",
+                "brightness(1.2) contrast(1.1) saturate(1.3)",
+                "brightness(1) contrast(1) saturate(1)",
+              ],
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{
+              duration: 0.5,
+              rotate: { duration: 0.3 },
+              filter: { duration: 0.4 },
+            }}
+            className="block w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto relative cursor-pointer group"
+            title="dont click"
+          >
+            <motion.div
+              className={`absolute inset-0 bg-gradient-to-r from-red-500 to-red-700 transform rotate-45`}
+              whileHover={{
+                background: [
+                  "linear-gradient(45deg, #ef4444, #dc2626)",
+                  "linear-gradient(45deg, #dc2626, #b91c1c)",
+                  "linear-gradient(45deg, #b91c1c, #991b1b)",
+                  "linear-gradient(45deg, #991b1b, #ef4444)",
+                ],
+                boxShadow: [
+                  "0 0 0 rgba(239, 68, 68, 0)",
+                  "0 0 20px rgba(239, 68, 68, 0.5)",
+                  "0 0 30px rgba(239, 68, 68, 0.7)",
+                  "0 0 20px rgba(239, 68, 68, 0.5)",
+                  "0 0 0 rgba(239, 68, 68, 0)",
+                ],
+              }}
+              transition={{ duration: 0.6 }}
+            />
             <div className={`absolute inset-2 ${darkMode ? "bg-black" : "bg-white"} transform rotate-45`} />
             <Image
-              src="/assets/c5.jpeg" // Updated path to your profile photo
+              src="/assets/c5.jpeg"
               alt="Ayush Dubey"
               width={180}
               height={180}
-              className="absolute inset-4 object-cover transform -rotate-45"
+              className="absolute inset-4 object-cover transform -rotate-45 group-hover:brightness-110 transition-all duration-300"
               style={{ objectFit: "contain" }}
               priority
             />
-          </div>
+            {/* Red scanline effect */}
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/40 to-transparent h-2 transform rotate-45"
+              initial={{ y: "-100%" }}
+              whileHover={{ y: "200%" }}
+              transition={{ duration: 0.6, repeat: 1 }}
+            />
+            {/* Red glitch bars */}
+            <motion.div
+              className="absolute inset-0 transform rotate-45"
+              whileHover={{
+                background: [
+                  "transparent",
+                  "linear-gradient(90deg, transparent 0%, #ef4444 2%, transparent 4%, transparent 96%, #dc2626 98%, transparent 100%)",
+                  "linear-gradient(90deg, transparent 0%, #dc2626 1%, transparent 3%, transparent 97%, #ef4444 99%, transparent 100%)",
+                  "transparent",
+                ],
+              }}
+              transition={{ duration: 0.4, repeat: 1 }}
+            />
+            {/* Pulsing red border */}
+            <motion.div
+              className="absolute inset-0 border-2 border-transparent transform rotate-45"
+              whileHover={{
+                borderColor: "#ef4444",
+                boxShadow: [
+                  "0 0 0 rgba(239, 68, 68, 0)",
+                  "0 0 15px rgba(239, 68, 68, 0.6)",
+                  "0 0 25px rgba(239, 68, 68, 0.8)",
+                  "0 0 15px rgba(239, 68, 68, 0.6)",
+                  "0 0 0 rgba(239, 68, 68, 0)",
+                ],
+              }}
+              transition={{ duration: 0.8 }}
+            />
+          </motion.a>
         </motion.div>
 
         {/* Name - Responsive text sizing */}
