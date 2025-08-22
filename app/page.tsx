@@ -14,6 +14,7 @@ import Chess from "@/components/chess"
 import Resume from "@/components/resume"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
+import CustomCursor from "@/components/custom-cursor"
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(true)
@@ -40,6 +41,9 @@ export default function Portfolio() {
           } bg-[size:25px_25px]`}
         />
       </motion.div>
+
+      {/* Custom Cursor */}
+      <CustomCursor darkMode={darkMode} />
 
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <Hero darkMode={darkMode} />

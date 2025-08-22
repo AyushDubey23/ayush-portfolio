@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 interface PhotographyProps {
   darkMode: boolean
@@ -10,6 +10,7 @@ interface PhotographyProps {
 
 export default function Photography({ darkMode }: PhotographyProps) {
   const scrollRef = useRef<HTMLDivElement>(null)
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   // Updated photo paths to match your assets folder
   const photos = [
@@ -34,6 +35,24 @@ export default function Photography({ darkMode }: PhotographyProps) {
         scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" })
       }
     }
+  }
+
+  const getScaleForIndex = (currentIndex: number) => {
+    if (hoveredIndex === null) return 1
+
+    if (currentIndex === hoveredIndex) {
+      return 1.15 // Main hovered image
+    }
+
+    const distance = Math.abs(currentIndex - hoveredIndex)
+    if (distance === 1) {
+      return 1.08 // Adjacent images
+    }
+    if (distance === 2) {
+      return 1.04 // Images 2 positions away
+    }
+
+    return 1 // All other images
   }
 
   return (
@@ -68,7 +87,7 @@ export default function Photography({ darkMode }: PhotographyProps) {
 
           <div
             ref={scrollRef}
-            className="flex space-x-4 pb-4 overflow-x-auto scrollbar-hide"
+            className="flex space-x-4 pb-4 overflow-x-auto scrollbar-hide py-8"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {photos.map((photo, index) => (
@@ -78,23 +97,43 @@ export default function Photography({ darkMode }: PhotographyProps) {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
+                animate={{
+                  scale: getScaleForIndex(index),
+                  zIndex: hoveredIndex === index ? 10 : 1,
+                }}
                 whileHover={{
-                  scale: 1.05,
-                  zIndex: 10,
-                  boxShadow: "0 20px 40px rgba(239, 68, 68, 0.3)",
+                  boxShadow:
+                    hoveredIndex === index
+                      ? "0 20px 40px rgba(239, 68, 68, 0.3)"
+                      : "0 10px 20px rgba(239, 68, 68, 0.2)",
+                }}
+                onHoverStart={() => setHoveredIndex(index)}
+                onHoverEnd={() => setHoveredIndex(null)}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 30,
                 }}
                 className="flex-shrink-0 relative group cursor-pointer"
               >
-                <div className="w-48 h-32 relative overflow-hidden border-2 border-gray-700 group-hover:border-red-500 transition-all duration-300">
+                <div
+                  className={`w-56 h-40 relative overflow-hidden border-2 transition-all duration-300 ${
+                    hoveredIndex === index
+                      ? "border-red-500"
+                      : Math.abs(index - (hoveredIndex || -10)) <= 2 && hoveredIndex !== null
+                        ? "border-red-500/50"
+                        : "border-gray-700"
+                  }`}
+                >
                   <Image
                     src={photo.src || "/placeholder.svg"}
                     alt={photo.alt}
                     fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="object-cover transition-transform duration-300"
+                    style={{
+                      transform: hoveredIndex === index ? "scale(1.1)" : "scale(1)",
+                    }}
                   />
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="text-white font-mono text-sm tracking-wider">{photo.alt}</div>
-                  </div>
                 </div>
               </motion.div>
             ))}
