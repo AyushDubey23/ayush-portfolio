@@ -112,7 +112,7 @@ export default function Hero({ darkMode }: HeroProps) {
             />
             <div className={`absolute inset-2 ${darkMode ? "bg-black" : "bg-white"} transform rotate-45`} />
             <Image
-              src="/assets/c5.jpeg"
+              src="/assets/c5.jpg"
               alt="Ayush Dubey"
               width={180}
               height={180}
