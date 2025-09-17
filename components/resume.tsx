@@ -101,7 +101,7 @@ export default function Resume({ darkMode }: ResumeProps) {
           <div className="w-24 h-1 bg-red-500 mx-auto mb-8" />
 
           <motion.a
-            href="/assets/rressume.pdf" // Updated path to your resume
+            href="/rressume.pdf"
             download="Ayush_Dubey_Resume.pdf"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

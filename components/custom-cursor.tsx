@@ -47,7 +47,7 @@ export default function CustomCursor({ darkMode }: CustomCursorProps) {
         }
       `}</style>
 
-      {/* Single liquid drop cursor */}
+      {/* Faster liquid drop cursor */}
       <motion.div
         className={`fixed top-0 left-0 pointer-events-none z-[9999] w-3 h-3 rounded-full ${
           darkMode ? "bg-red-500" : "bg-red-600"
@@ -59,9 +59,9 @@ export default function CustomCursor({ darkMode }: CustomCursorProps) {
         }}
         transition={{
           type: "spring",
-          stiffness: 50,
-          damping: 15,
-          mass: 1.5,
+          stiffness: 300, // fast response
+          damping: 20,    // smooth stop
+          mass: 0.5,      // lighter for quicker movement
         }}
       />
     </>
