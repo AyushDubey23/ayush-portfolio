@@ -16,9 +16,9 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata = {
-  title: "Ayush Dubey | Portfolio",
-  description: "B.Tech CSE Student, Competitive Programmer, and Full Stack Developer",
-    generator: 'v0.dev'
+  title: "Ayush Dubey Portfolio",
+  description: "Ayush Dubey Portfolio",
+    generator: 'ayush dubey lol'
 }
 
 export default function RootLayout({
