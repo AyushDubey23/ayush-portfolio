@@ -78,7 +78,7 @@ export default function Chess({ darkMode }: ChessProps) {
                   darkMode ? "bg-black/70 border-amber-500/30" : "bg-white/70 border-amber-500/20"
                 }`}
               >
-                <div className="text-4xl font-bold text-amber-400 mb-2">959</div>
+                <div className="text-4xl font-bold text-amber-400 mb-2">1029</div>
                 <div className={`text-lg ${darkMode ? "text-gray-300" : "text-gray-700"}`}>CODEFORCES</div>
                 <div className={`text-sm font-mono ${darkMode ? "text-gray-500" : "text-gray-600"}`}>
                   COMPETITIVE PROGRAMMING
