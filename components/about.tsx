@@ -11,10 +11,10 @@ export default function About({ darkMode }: AboutProps) {
   const identities = [
     { icon: Code, text: "COMPETITIVE PROGRAMMER", color: "text-red-500" },
     { icon: Database, text: "FULL STACK WEB DEVELOPER", color: "text-blue-400" },
-    { icon: Smartphone, text: "ANDROID APP DEVELOPMENT ENTHUSIAST", color: "text-green-400" },
+    { icon: Smartphone, text: "ANDROID APP DEVELOPER", color: "text-green-400" },
     { icon: Brain, text: "MACHINE LEARNING BEGINNER", color: "text-purple-400" },
     { icon: GitBranch, text: "OPEN SOURCE CONTRIBUTOR", color: "text-orange-400" },
-    { icon: Bot, text: "PROMPT ENGINEER IN TRAINING", color: "text-cyan-400" },
+    { icon: Bot, text: "PROMPT ENGINEER", color: "text-cyan-400" },
   ]
 
   return (
