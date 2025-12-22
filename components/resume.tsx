@@ -112,7 +112,7 @@ export default function Resume({ darkMode }: ResumeProps) {
   <Download size={20} />
   <span>RESUME</span>
 </motion.a>
-
+</motion.div>
 
         <div className="max-w-6xl mx-auto">
           {/* Section Tabs */}
