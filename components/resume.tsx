@@ -1,5 +1,6 @@
 "use client"
 
+import * as React from "react"
 import { motion } from "framer-motion"
 import { Download, GraduationCap, Code, Wrench } from "lucide-react"
 import { useState } from "react"
