@@ -191,12 +191,12 @@ export default function Hero({ darkMode }: HeroProps) {
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 max-w-4xl mx-auto mb-8 md:mb-12"
         >
           {[
-            "💻 COMPETITIVE PROGRAMMER",
-            "🌐 FULL STACK DEVELOPER",
-            "📱 ANDROID ENTHUSIAST",
-            "🧠 ML BEGINNER",
-            "🔓 OPEN SOURCE CONTRIBUTOR",
-            "🤖 PROMPT ENGINEER",
+            " COMPETITIVE PROGRAMMER",
+            " FULL STACK DEVELOPER",
+            " APP DEVELOPER",
+            " ML ENTHUSIAST",
+            " OPEN SOURCE CONTRIBUTOR",
+            " PROMPT ENGINEER",
           ].map((item, index) => (
             <motion.div
               key={index}
