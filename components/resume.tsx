@@ -102,7 +102,7 @@ export default function Resume({ darkMode }: ResumeProps) {
 
           <motion.a
             href="/Ayush.pdf"
-            download="Ayush_Dubey_Resume.pdf"
+            download="Ayush Dubey Resume.pdf"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center space-x-2 px-8 py-4 bg-red-500 text-white font-mono tracking-wider hover:bg-red-600 transition-colors"
