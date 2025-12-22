@@ -100,17 +100,18 @@ export default function Resume({ darkMode }: ResumeProps) {
           <h2 className="text-5xl font-bold mb-4 tracking-wider">RESUME</h2>
           <div className="w-24 h-1 bg-red-500 mx-auto mb-8" />
 
-          <motion.a
-            href="/rressume.pdf"
-            download="Ayush Dubey Resume.pdf"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center space-x-2 px-8 py-4 bg-red-500 text-white font-mono tracking-wider hover:bg-red-600 transition-colors"
-          >
-            <Download size={20} />
-            <span>DOWNLOAD RESUME</span>
-          </motion.a>
-        </motion.div>
+<motion.a
+  href="https://drive.google.com/file/d/1hxbhWO9GoNNRkf0xyqm4-SBTqBsVK4W2/view?usp=sharing"
+  target="_blank"
+  rel="noopener noreferrer"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="inline-flex items-center space-x-2 px-8 py-4 bg-red-500 text-white font-mono tracking-wider hover:bg-red-600 transition-colors"
+>
+  <Download size={20} />
+  <span>RESUME</span>
+</motion.a>
+
 
         <div className="max-w-6xl mx-auto">
           {/* Section Tabs */}
