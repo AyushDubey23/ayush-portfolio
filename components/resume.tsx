@@ -102,7 +102,7 @@ export default function Resume({ darkMode }: ResumeProps) {
           <div className="w-24 h-1 bg-red-500 mx-auto mb-8" />
 
 <motion.a
-  href="hhttps://drive.google.com/file/d/13rO-8uACFtIqj6OjruS09QPrRnc6eXyn/view?usp=sharing"
+  href="https://drive.google.com/file/d/1wnXXEUvSvwmWCSK3oSWptxa55RSQLb_i/view?usp=sharing"
   target="_blank"
   rel="noopener noreferrer"
   whileHover={{ scale: 1.05 }}
