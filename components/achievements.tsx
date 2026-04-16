@@ -23,7 +23,7 @@ export default function Achievements({ darkMode }: AchievementsProps) {
     },
     {
       icon: Code,
-      title: "959 RATING",
+      title: "1233 RATING",
       subtitle: "Codeforces Competitive Programming",
       color: "from-green-400 to-blue-500",
       link: "https://codeforces.com/profile/AyushDubey23",
