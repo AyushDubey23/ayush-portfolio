@@ -98,7 +98,7 @@ export default function MainProjects({ darkMode }: MainProjectsProps) {
                     />
                   </div>
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="text-white font-mono text-lg">VIEW PROJECT</div>
+                    <div className="text-white font-mono text-lg">VIEW MY PROJECT</div>
                   </div>
                 </div>
               </motion.div>
@@ -142,7 +142,7 @@ export default function MainProjects({ darkMode }: MainProjectsProps) {
                       className="flex items-center space-x-2 px-6 py-3 bg-red-500 text-white font-mono tracking-wider hover:bg-red-600 transition-colors"
                     >
                       <ExternalLink size={20} />
-                      <span>LIVE DEMO</span>
+                      <span>LIVE LINK</span>
                     </motion.a>
                   )}
 

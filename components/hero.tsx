@@ -193,10 +193,10 @@ export default function Hero({ darkMode }: HeroProps) {
           {[
             " COMPETITIVE PROGRAMMER",
             " FULL STACK DEVELOPER",
-            " APP DEVELOPER",
+            " ANDROID APP DEVELOPER",
             " ML ENTHUSIAST",
             " OPEN SOURCE CONTRIBUTOR",
-            " PROMPT ENGINEER",
+            " WINDOWS APP DEVELOPER",
           ].map((item, index) => (
             <motion.div
               key={index}

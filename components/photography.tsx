@@ -46,13 +46,13 @@ export default function Photography({ darkMode }: PhotographyProps) {
 
     const distance = Math.abs(currentIndex - hoveredIndex)
     if (distance === 1) {
-      return 1.08 // Adjacent images
+      return 1.08 
     }
     if (distance === 2) {
-      return 1.04 // Images 2 positions away
+      return 1.04 
     }
 
-    return 1 // All other images
+    return 1 
   }
 
   return (

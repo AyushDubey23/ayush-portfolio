@@ -51,7 +51,7 @@ export default function Footer({ darkMode }: FooterProps) {
             transition={{ delay: 0.4 }}
             className={`text-sm font-mono ${darkMode ? "text-gray-500" : "text-gray-500"}`}
           >
-            © 2024 AYUSH DUBEY. ALL RIGHTS RESERVED.
+            © 2025 AYUSH DUBEY. ALL RIGHTS RESERVED.
           </motion.div>
 
           <motion.div
